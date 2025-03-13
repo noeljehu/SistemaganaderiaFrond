@@ -1,0 +1,44 @@
+.venta-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .venta-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .venta-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .venta-form .form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .venta-form .form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .venta-form button[type="submit"] {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .venta-form button[type="submit"]:hover {
+    background: #c82333;
+  }
+  
