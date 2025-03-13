@@ -1,0 +1,53 @@
+/* Formulario Proveedor */
+.proveedor-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin: 0 auto 30px;
+  max-width: 600px;
+}
+
+.proveedor-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.proveedor-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.proveedor-form .form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.proveedor-form .form-group input,
+.proveedor-form .form-group select,
+.proveedor-form .form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.proveedor-form button[type="submit"] {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.proveedor-form button[type="submit"]:hover {
+  background: #0056b3;
+}
+
+/* Sección CRUD (se usa el mismo estilo global definido anteriormente) */
