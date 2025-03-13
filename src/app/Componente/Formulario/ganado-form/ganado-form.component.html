@@ -1,1 +1,63 @@
-<p>ganado-form works!</p>
+<div class="ganado-container">
+    <h2>Gestión de Ganado</h2>
+
+    <!-- Formulario -->
+    <form class="ganado-form">
+        <label for="codigo">Código Único:</label>
+        <input type="text" id="codigo" placeholder="Ingrese código único">
+
+        <label for="corral">Corral:</label>
+        <select id="corral">
+            <option value="">Seleccione un corral</option>
+            <option value="1">Corral 1</option>
+            <option value="2">Corral 2</option>
+        </select>
+
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Ingrese peso">
+
+        <label for="raza">Raza:</label>
+        <input type="text" id="raza" placeholder="Ingrese raza">
+
+        <label for="estado">Estado de Salud:</label>
+        <select id="estado">
+            <option value="">Seleccione estado</option>
+            <option value="Sano">Sano</option>
+            <option value="Enfermo">Enfermo</option>
+        </select>
+
+        <div class="button-group">
+            <button type="button" class="btn-crear">Agregar</button>
+            <button type="button" class="btn-actualizar">Actualizar</button>
+            <button type="button" class="btn-eliminar">Eliminar</button>
+            <button type="button" class="btn-limpiar">Limpiar</button>
+        </div>
+    </form>
+
+    <!-- Tabla -->
+    <table class="ganado-table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Corral</th>
+                <th>Peso (kg)</th>
+                <th>Raza</th>
+                <th>Estado de Salud</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>GND001</td>
+                <td>Corral 1</td>
+                <td>450</td>
+                <td>Angus</td>
+                <td>Sano</td>
+                <td>
+                    <button class="btn-editar">✏️</button>
+                    <button class="btn-borrar">🗑️</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

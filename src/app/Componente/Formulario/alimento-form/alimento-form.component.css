@@ -1,0 +1,54 @@
+.alimento-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h2 {
+    text-align: center;
+    color: #000;
+}
+
+.alimento-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alimento-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.alimento-form input, .alimento-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.alimento-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.alimento-table th, .alimento-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.alimento-table th {
+    background-color: #000;
+    color: white;
+}

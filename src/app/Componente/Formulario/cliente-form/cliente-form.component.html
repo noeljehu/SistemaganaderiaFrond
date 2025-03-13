@@ -1,1 +1,28 @@
-<p>cliente-form works!</p>
+<form>
+    <label>Nombre:</label>
+    <input type="text" name="nombre" required>
+
+    <label>Correo:</label>
+    <input type="email" name="correo" required>
+
+    <label>Contraseña:</label>
+    <input type="password" name="contrasena" required>
+
+    <label>Teléfono:</label>
+    <input type="text" name="telefono">
+
+    <label>Dirección:</label>
+    <textarea name="direccion"></textarea>
+
+    <label>Rol:</label>
+    <select name="id_rol">
+        <option value="1">Administrador</option>
+        <option value="2">Empleado</option>
+        <option value="3">Cliente</option>
+    </select>
+
+    <label>Estado:</label>
+    <input type="checkbox" name="estado" checked> Activo
+
+    <button type="submit">Guardar</button>
+</form>

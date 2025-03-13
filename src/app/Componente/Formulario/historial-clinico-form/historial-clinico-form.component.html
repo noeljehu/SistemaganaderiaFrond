@@ -1,1 +1,48 @@
-<p>historial-clinico-form works!</p>
+<div class="historial-container">
+    <h2>Historial Clínico</h2>
+
+    <form class="historial-form">
+        <label for="codigo">Código Ganado:</label>
+        <input type="text" id="codigo" placeholder="Ingrese código del ganado">
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha">
+
+        <label for="diagnostico">Diagnóstico:</label>
+        <input type="text" id="diagnostico" placeholder="Ingrese diagnóstico">
+
+        <label for="tratamiento">Tratamiento:</label>
+        <input type="text" id="tratamiento" placeholder="Ingrese tratamiento">
+
+        <div class="button-group">
+            <button type="button" class="btn-crear">Agregar</button>
+            <button type="button" class="btn-actualizar">Actualizar</button>
+            <button type="button" class="btn-eliminar">Eliminar</button>
+            <button type="button" class="btn-limpiar">Limpiar</button>
+        </div>
+    </form>
+
+    <table class="historial-table">
+        <thead>
+            <tr>
+                <th>Código Ganado</th>
+                <th>Fecha</th>
+                <th>Diagnóstico</th>
+                <th>Tratamiento</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>G001</td>
+                <td>2025-03-10</td>
+                <td>Fiebre</td>
+                <td>Antibióticos</td>
+                <td>
+                    <button class="btn-editar">✏️</button>
+                    <button class="btn-borrar">🗑️</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
