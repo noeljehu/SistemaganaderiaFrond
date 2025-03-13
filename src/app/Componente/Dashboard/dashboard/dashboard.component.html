@@ -1,0 +1,45 @@
+<div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar" [class.closed]="isSidebarClosed">
+      <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
+      <h2> Ganadería Huaman</h2>
+      <ul>
+        <li>
+          <a routerLink="/dashboard/inicio">
+            <mat-icon>home</mat-icon> <span *ngIf="!isSidebarClosed">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/ganado">
+            <mat-icon>agriculture</mat-icon> <span *ngIf="!isSidebarClosed">Gestión de Ganado</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/ventas">
+            <mat-icon>attach_money</mat-icon> <span *ngIf="!isSidebarClosed">Ventas</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/proveedores">
+            <mat-icon>local_shipping</mat-icon> <span *ngIf="!isSidebarClosed">Proveedores</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/reportes">
+            <mat-icon>bar_chart</mat-icon> <span *ngIf="!isSidebarClosed">Reportes</span>
+          </a>
+        </li>
+        <li>
+          <a routerLink="/dashboard/config">
+            <mat-icon>settings</mat-icon> <span *ngIf="!isSidebarClosed">Configuración</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  
+    <!-- Contenido Principal -->
+    <main class="content">
+      <h1>Bienvenido al Sistema de Ganadería</h1>
+    </main>
+  </div>
+  
