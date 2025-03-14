@@ -1,74 +1,73 @@
 <div class="form-container medicina-form">
-    <h2>Formulario de Medicina</h2>
-    <form>
-      <div class="form-group">
-        <label for="medicina-nombre">Nombre:</label>
-        <input type="text" id="medicina-nombre" name="nombre" required>
-      </div>
-      <div class="form-group">
-        <label for="medicina-tipo">Tipo:</label>
-        <select id="medicina-tipo" name="tipo" required>
-          <option value="">Seleccione...</option>
-          <option value="Antibiótico">Antibiótico</option>
-          <option value="Vitaminas">Vitaminas</option>
-          <option value="Antiinflamatorio">Antiinflamatorio</option>
-          <option value="Otros">Otros</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="medicina-descripcion">Descripción:</label>
-        <textarea id="medicina-descripcion" name="descripcion"></textarea>
-      </div>
-      <div class="form-group">
-        <label for="medicina-dosis">Dosis Recomendada:</label>
-        <input type="text" id="medicina-dosis" name="dosis_recomendada">
-      </div>
-      <div class="form-group">
-        <label for="medicina-cantidad">Cantidad:</label>
-        <input type="number" id="medicina-cantidad" name="cantidad" step="any" required>
-      </div>
-      <div class="form-group">
-        <label for="medicina-precio">Precio:</label>
-        <input type="number" id="medicina-precio" name="precio" step="any" required>
-      </div>
-      <div class="form-group">
-        <label for="medicina-fecha-vencimiento">Fecha de Vencimiento:</label>
-        <input type="date" id="medicina-fecha-vencimiento" name="fecha_vencimiento">
-      </div>
-      <button type="submit">Guardar Medicina</button>
-    </form>
-  
-    <!-- Tabla de Listado y CRUD -->
-    <div class="crud-section">
-      <table class="crud-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Tipo</th>
-            <th>Cantidad</th>
-            <th>Precio</th>
-            <th>Fecha Vencimiento</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- Registro de ejemplo -->
-          <tr>
-            <td>1</td>
-            <td>Medicina A</td>
-            <td>Antibiótico</td>
-            <td>10</td>
-            <td>50.00</td>
-            <td>2025-12-31</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="crud-buttons">
-        <button type="button" class="btn btn-add">Agregar</button>
-        <button type="button" class="btn btn-edit">Editar</button>
-        <button type="button" class="btn btn-delete">Eliminar</button>
-        <button type="button" class="btn btn-view">Consultar</button>
-      </div>
+  <h2>Formulario de Medicina</h2>
+  <form>
+    <div class="form-group">
+      <label for="medicina-nombre">Nombre:</label>
+      <input type="text" id="medicina-nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="medicina-tipo">Tipo:</label>
+      <select id="medicina-tipo" name="tipo" required>
+        <option value="">Seleccione...</option>
+        <option value="Antibiótico">Antibiótico</option>
+        <option value="Vitaminas">Vitaminas</option>
+        <option value="Antiinflamatorio">Antiinflamatorio</option>
+        <option value="Otros">Otros</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="medicina-descripcion">Descripción:</label>
+      <textarea id="medicina-descripcion" name="descripcion"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="medicina-dosis">Dosis Recomendada:</label>
+      <input type="text" id="medicina-dosis" name="dosis_recomendada">
+    </div>
+    <div class="form-group">
+      <label for="medicina-cantidad">Cantidad:</label>
+      <input type="number" id="medicina-cantidad" name="cantidad" step="any" required>
+    </div>
+    <div class="form-group">
+      <label for="medicina-precio">Precio:</label>
+      <input type="number" id="medicina-precio" name="precio" step="any" required>
+    </div>
+    <div class="form-group">
+      <label for="medicina-fecha-vencimiento">Fecha de Vencimiento:</label>
+      <input type="date" id="medicina-fecha-vencimiento" name="fecha_vencimiento">
+    </div>
+    <button type="submit">Guardar Medicina</button>
+  </form>
+
+  <!-- Tabla de Listado y CRUD -->
+  <div class="crud-section">
+    <table class="crud-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Tipo</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Fecha Vencimiento</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Registro de ejemplo -->
+        <tr>
+          <td>1</td>
+          <td>Medicina A</td>
+          <td>Antibiótico</td>
+          <td>10</td>
+          <td>50.00</td>
+          <td>2025-12-31</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="crud-buttons">
+      <button type="button" class="btn btn-add">Agregar</button>
+      <button type="button" class="btn btn-edit">Editar</button>
+      <button type="button" class="btn btn-delete">Eliminar</button>
+      <button type="button" class="btn btn-view">Consultar</button>
     </div>
   </div>
-  
+</div>
