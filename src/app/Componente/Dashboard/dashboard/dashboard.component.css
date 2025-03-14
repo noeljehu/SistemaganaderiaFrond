@@ -1,89 +1,100 @@
 /* Contenedor Principal */
 .dashboard-container {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 250px;
-    background: #2c3e50;
-    color: white;
-    padding: 20px;
-    transition: width 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .sidebar.closed {
-    width: 60px;
-    padding: 20px 10px;
-  }
-  
-  /* Título del Sidebar */
-  .sidebar h2 {
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .sidebar.closed h2 {
-    display: none;
-  }
-  
-  /* Lista de enlaces */
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-    flex-grow: 1;
-  }
-  
-  .sidebar ul li {
-    padding: 10px 0;
-  }
-  
-  .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .sidebar.closed ul li a {
-    justify-content: center;
-    font-size: 24px;
-  }
-  
-  .sidebar.closed ul li a span {
-    display: none;
-  }
-  
-  /* Botón de Toggle */
-  .toggle-btn {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    align-self: flex-start;
-  }
-  
-  /* Contenido Principal */
-  .content {
-    flex-grow: 1;
-    padding: 20px;
-    transition: margin-left 0.3s ease-in-out;
-    width: calc(100% - 250px);
-  }
-  
-  .sidebar.closed + .content {
-    width: calc(100% - 60px);
-  }
-  
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #2c3e50;
+  color: white;
+  padding: 20px;
+  transition: width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Barra lateral cerrada */
+.sidebar.closed {
+  width: 60px;  /* Ancho reducido */
+  padding: 20px 10px;
+}
+
+/* Título del Sidebar */
+.sidebar h2 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Ocultar título cuando la barra lateral está cerrada */
+.sidebar.closed h2 {
+  display: none;
+}
+
+/* Lista de enlaces */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+/* Estilo de los elementos de la lista */
+.sidebar ul li {
+  padding: 10px 0;
+}
+
+/* Estilo de los enlaces en la barra lateral */
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Estilo cuando la barra lateral está cerrada */
+.sidebar.closed ul li a {
+  justify-content: center;  /* Alinea los iconos en el centro */
+  font-size: 24px; /* Aumenta el tamaño del icono */
+}
+
+/* Ocultar solo el texto cuando la barra lateral está cerrada */
+.sidebar.closed ul li a span {
+  display: none; /* Esto oculta el texto */
+}
+
+/* Mostrar los iconos cuando la barra lateral está cerrada */
+.sidebar.closed ul li a mat-icon {
+  font-size: 24px;  /* Ajusta el tamaño del icono */
+}
+
+/* Botón de Toggle */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+/* Contenido Principal */
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+  width: calc(100% - 250px);
+}
+
+/* Ajustar el contenido cuando la barra lateral está cerrada */
+.sidebar.closed + .content {
+  width: calc(100% - 60px); /* Ajusta el contenido cuando la barra está cerrada */
+}

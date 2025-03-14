@@ -1,54 +1,139 @@
-.alimento-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* Fondo general más suave */
+body {
+    background-color: #e9ecef;
+    font-family: 'Arial', sans-serif;
 }
 
+/* Ajuste en el container para mejor espaciado */
+.container {
+    margin-top: 60px;
+    max-width: 900px;
+}
+
+/* Título principal más grande y atractivo */
 h2 {
+    color: #007bff;
+    font-size: 2.5rem;
+    font-weight: 600;
     text-align: center;
-    color: #000;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.alimento-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+/* Card con sombras, borde redondeado y un poco más de padding */
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.alimento-form label {
+/* Inputs y selects más grandes con bordes redondeados */
+.form-control, .form-select {
+    font-size: 1.1rem;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Focus en inputs y selects */
+.form-control:focus, .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Botones dentro del formulario más grandes y con borde redondeado */
+button {
+    font-size: 1rem;
+    padding: 12px 25px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Colores de botones más intensos y con transiciones */
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-warning {
+    background-color: #ffc107;
+    border-color: #ffc107;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Efecto de hover en los botones */
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Estilo para la tabla */
+.table {
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Fila de la tabla con color alternado */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #ffffff;
+}
+
+/* Cabecera de la tabla con fondo oscuro y texto claro */
+.table-dark {
+    background-color: #343a40;
+    color: #fff;
     font-weight: bold;
-    color: #333;
 }
 
-.alimento-form input, .alimento-form select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #aaa;
+/* Mejorar visibilidad de las acciones en la tabla */
+.table td button {
+    font-size: 1.2rem;
+    padding: 8px 12px;
     border-radius: 5px;
-    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.alimento-table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: left;
+/* Botones de acción con colores más claros */
+.btn-outline-primary, .btn-outline-danger {
+    color: #007bff;
+    border-color: #007bff;
 }
 
-.alimento-table th, .alimento-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
 }
 
-.alimento-table th {
-    background-color: #000;
+/* Efectos de hover en los botones de acción */
+.btn-outline-primary:hover {
+    background-color: #007bff;
     color: white;
+}
+
+.btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Espaciado y alineación correcta en la tabla */
+.table th, .table td {
+    vertical-align: middle;
+    text-align: center;
 }
