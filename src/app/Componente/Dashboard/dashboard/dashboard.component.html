@@ -3,24 +3,91 @@
     <button class="toggle-btn" (click)="toggleSidebar()">☰</button>
     <h2>Ganadería Huamán</h2>
     <ul>
+      <!-- 🏠 Inicio -->
       <li><a routerLink="/dashboard/inicio"><mat-icon>dashboard</mat-icon><span> Inicio</span></a></li>
-      <li><a routerLink="/dashboard/usuario"><mat-icon>account_circle</mat-icon><span> Usuarios</span></a></li>
-      <li><a routerLink="/dashboard/cliente"><mat-icon>person_add</mat-icon><span> Clientes</span></a></li>
-      <li><a routerLink="/dashboard/proveedor"><mat-icon>business</mat-icon><span> Proveedores</span></a></li>
-      <li><a routerLink="/dashboard/establo"><mat-icon>home</mat-icon><span> Establo</span></a></li>
-      <li><a routerLink="/dashboard/corral"><mat-icon>nature</mat-icon><span> Corrales</span></a></li>
-      <li><a routerLink="/dashboard/ganado"><mat-icon>pets</mat-icon><span> Ganado</span></a></li>
-      <li><a routerLink="/dashboard/historial-clinico"><mat-icon>history</mat-icon><span> Historial Clínico</span></a></li>
-      <li><a routerLink="/dashboard/alimento"><mat-icon>restaurant</mat-icon><span> Alimentos</span></a></li>
-      <li><a routerLink="/dashboard/registro-alimento"><mat-icon>local_dining</mat-icon><span> Registro de Alimentos Por Coral</span></a></li>
-      <li><a routerLink="/dashboard/medicina"><mat-icon>local_pharmacy</mat-icon><span> Medicina</span></a></li>
-      <li><a routerLink="/dashboard/registro-medicina"><mat-icon>medication</mat-icon><span> Registro de Medicina Por Ganado</span></a></li>
-      <li><a routerLink="/dashboard/venta"><mat-icon>sell</mat-icon><span> Ventas</span></a></li>
+
+      <!-- 🔹 Administración -->
+      <li>
+        <a (click)="toggleSubMenu('administracion')">
+          <mat-icon>settings</mat-icon>
+          <span> Administración</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['administracion']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['administracion']" class="submenu">
+        <li><a routerLink="/dashboard/usuario"><mat-icon>account_circle</mat-icon> Usuarios</a></li>
+        <li><a routerLink="/dashboard/cliente"><mat-icon>person_add</mat-icon> Clientes</a></li>
+        <li><a routerLink="/dashboard/proveedor"><mat-icon>business</mat-icon> Proveedores</a></li>
+      </ul>
+
+      <!-- 🏠 Infraestructura -->
+      <li>
+        <a (click)="toggleSubMenu('infraestructura')">
+          <mat-icon>home_work</mat-icon>
+          <span> Infraestructura</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['infraestructura']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['infraestructura']" class="submenu">
+        <li><a routerLink="/dashboard/establo"><mat-icon>home</mat-icon> Establo</a></li>
+        <li><a routerLink="/dashboard/corral"><mat-icon>nature</mat-icon> Corrales</a></li>
+      </ul>
+
+      <!-- 🐄 Gestión del Ganado -->
+      <li>
+        <a (click)="toggleSubMenu('ganado')">
+          <mat-icon>pets</mat-icon>
+          <span> Gestión del Ganado</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['ganado']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['ganado']" class="submenu">
+        <li><a routerLink="/dashboard/ganado"><mat-icon>playlist_add</mat-icon> Registro de Ganado</a></li>
+        <li><a routerLink="/dashboard/historial-clinico"><mat-icon>history</mat-icon> Historial Clínico</a></li>
+      </ul>
+
+      <!-- 🍽️ Alimentación -->
+      <li>
+        <a (click)="toggleSubMenu('alimentacion')">
+          <mat-icon>restaurant</mat-icon>
+          <span> Alimentación</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['alimentacion']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['alimentacion']" class="submenu">
+        <li><a routerLink="/dashboard/alimento"><mat-icon>fastfood</mat-icon> Alimentos</a></li>
+        <li><a routerLink="/dashboard/registro-alimento"><mat-icon>local_dining</mat-icon> Registro de Alimentos</a></li>
+      </ul>
+
+      <!-- 🏥 Salud Animal -->
+      <li>
+        <a (click)="toggleSubMenu('salud')">
+          <mat-icon>local_pharmacy</mat-icon>
+          <span> Salud Animal</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['salud']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['salud']" class="submenu">
+        <li><a routerLink="/dashboard/medicina"><mat-icon>medication</mat-icon> Medicina</a></li>
+        <li><a routerLink="/dashboard/registro-medicina"><mat-icon>medication_liquid</mat-icon> Registro de Medicina</a></li>
+      </ul>
+
+      <!-- 💰 Comercialización -->
+      <li>
+        <a (click)="toggleSubMenu('ventas')">
+          <mat-icon>sell</mat-icon>
+          <span> Comercialización</span>
+          <mat-icon class="arrow" [class.rotated]="expandedMenus['ventas']">expand_more</mat-icon>
+        </a>
+      </li>
+      <ul *ngIf="expandedMenus['ventas']" class="submenu">
+        <li><a routerLink="/dashboard/venta"><mat-icon>shopping_cart</mat-icon> Ventas</a></li>
+      </ul>
     </ul>
   </aside>
 
   <main class="content">
     <h1>Bienvenido al Sistema de Ganadería</h1>
-    <router-outlet></router-outlet> <!-- Aquí se cargarán los componentes -->
+    <router-outlet></router-outlet>
   </main>
 </div>

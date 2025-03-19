@@ -1,73 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
-}
-
+/* Ajustar el tamaño del contenedor */
 .ventas-container {
-    max-width: 600px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2, h3 {
-    text-align: center;
-}
-
-form {
+    min-height: 100vh;
+  }
+  
+  /* Asegúrate de que el formulario ocupe suficiente espacio */
+  form {
     display: flex;
     flex-direction: column;
-}
-
-label {
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-input {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-button {
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #218838;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-th {
-    background-color: #007bff;
-    color: white;
-}
-
-.eliminar {
-    background-color: red;
-}
-
-.eliminar:hover {
-    background-color: darkred;
-}
+    gap: 1rem;
+  }
+ 
+  
+  

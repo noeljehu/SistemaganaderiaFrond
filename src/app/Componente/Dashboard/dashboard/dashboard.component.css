@@ -98,3 +98,78 @@
 .sidebar.closed + .content {
   width: calc(100% - 60px); /* Ajusta el contenido cuando la barra está cerrada */
 }
+.dashboard-container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #1e1e2d;
+  color: white;
+  padding: 10px;
+  height: 100vh;
+  transition: width 0.3s ease-in-out;
+}
+
+.sidebar.closed {
+  width: 60px;
+}
+
+.sidebar h2 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.toggle-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+li a mat-icon {
+  margin-right: 10px;
+}
+
+li:hover {
+  background-color: #32324a;
+}
+
+.submenu {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu li {
+  padding: 5px 0;
+}
+
+.arrow {
+  margin-left: auto;
+  transition: transform 0.3s ease;
+}
+
+.arrow.rotated {
+  transform: rotate(180deg);
+}
