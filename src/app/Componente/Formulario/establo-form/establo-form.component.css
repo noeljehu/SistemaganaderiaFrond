@@ -1,0 +1,10 @@
+.establo-card {
+    background: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+    border-left: 5px solid #8B4513; /* Color madera */
+    border-radius: 10px;
+}
+
+.corral-card {
+    background: #f8f9fa;
+    border-left: 4px solid #28a745;
+}
