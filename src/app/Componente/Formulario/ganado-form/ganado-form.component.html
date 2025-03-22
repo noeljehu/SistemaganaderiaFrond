@@ -1,50 +1,11 @@
 <div class="container mt-5">
     <h2 class="text-center text-primary">Gestión de Ganado</h2>
 
-    <!-- Formulario de Registro -->
-    <div class="card p-4 shadow">
-        <form class="ganado-form">
-            <div class="mb-3">
-                <label for="codigo" class="form-label">Código Único:</label>
-                <input type="text" id="codigo" class="form-control" placeholder="Ingrese código único">
-            </div>
-
-            <div class="mb-3">
-                <label for="corral" class="form-label">Corral:</label>
-                <select id="corral" class="form-select">
-                    <option value="">Seleccione un corral</option>
-                    <option value="1">Corral 1</option>
-                    <option value="2">Corral 2</option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label for="peso" class="form-label">Peso (kg):</label>
-                <input type="number" id="peso" class="form-control" placeholder="Ingrese peso">
-            </div>
-
-            <div class="mb-3">
-                <label for="raza" class="form-label">Raza:</label>
-                <input type="text" id="raza" class="form-control" placeholder="Ingrese raza">
-            </div>
-
-            <div class="mb-3">
-                <label for="estado" class="form-label">Estado de Salud:</label>
-                <select id="estado" class="form-select">
-                    <option value="">Seleccione estado</option>
-                    <option value="Sano">Sano</option>
-                    <option value="Enfermo">Enfermo</option>
-                </select>
-            </div>
-
-            <!-- Botones de Acción -->
-            <div class="d-flex gap-2">
-                <button type="button" class="btn btn-success">Agregar</button>
-                <button type="button" class="btn btn-warning">Actualizar</button>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-                <button type="button" class="btn btn-secondary">Limpiar</button>
-            </div>
-        </form>
+    <!-- Botón para abrir el modal -->
+    <div class="text-end">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGanado" onclick="showAlert()">
+            Agregar Ganado
+        </button>
     </div>
 
     <!-- Tabla de Ganado Registrado -->
@@ -68,11 +29,15 @@
                     <td>Angus</td>
                     <td>Sano</td>
                     <td>
-                        <button class="btn btn-outline-primary btn-sm">✏️</button>
+                        <!-- Botón para abrir el modal en modo edición -->
+                        <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalGanado">✏️</button>
                         <button class="btn btn-outline-danger btn-sm">🗑️</button>
                     </td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    <!-- Incluir el componente del modal -->
+    <app-ganado-modal></app-ganado-modal>
 </div>

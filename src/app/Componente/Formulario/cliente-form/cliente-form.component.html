@@ -1,97 +1,50 @@
 <div class="container mt-5">
     <h2 class="text-center text-primary">Gestión de Cliente</h2>
 
-    <!-- Formulario de Registro -->
-    <div class="card p-4 shadow">
-        <form>
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre:</label>
-                <input type="text" id="nombre" class="form-control" placeholder="Ingrese nombre del cliente">
-            </div>
+    <!-- Campo de búsqueda -->
+    <div class="mb-3 d-flex">
+        <input type="text" class="form-control me-2" placeholder="Buscar cliente por nombre o DNI">
+        <button class="btn btn-primary">Buscar</button>
+    </div>
 
-            <div class="mb-3">
-                <label for="apellido" class="form-label">Apellido:</label>
-                <input type="text" id="apellido" class="form-control" placeholder="Ingrese apellido del cliente">
-            </div>
-
-            <div class="mb-3">
-                <label for="dni" class="form-label">DNI:</label>
-                <input type="number" id="dni" class="form-control" placeholder="Ingrese DNI del cliente">
-            </div>
-
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono:</label>
-                <input type="tel" id="telefono" class="form-control" placeholder="Ingrese teléfono del cliente">
-            </div>
-
-            <div class="mb-3">
-                <label for="correo" class="form-label">Correo Electrónico:</label>
-                <input type="email" id="correo" class="form-control" placeholder="Ingrese correo electrónico del cliente">
-            </div>
-
-            <div class="mb-3">
-                <label for="direccion" class="form-label">Dirección:</label>
-                <input type="text" id="direccion" class="form-control" placeholder="Ingrese dirección del cliente">
-            </div>
-
-            <div class="mb-3">
-                <label for="fechaRegistro" class="form-label">Fecha de Registro:</label>
-                <input type="date" id="fechaRegistro" class="form-control">
-            </div>
-
-            <!-- Botones de Acción -->
-            <div class="d-flex gap-2">
-                <button type="button" class="btn btn-success">Agregar</button>
-                <button type="button" class="btn btn-warning">Actualizar</button>
-                <button type="button" class="btn btn-danger">Eliminar</button>
-                <button type="button" class="btn btn-secondary">Limpiar</button>
-            </div>
-        </form>
+    <div class="text-end">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCliente" onclick="showAlert()">
+            Agregar Cliente
+        </button>
     </div>
 
     <!-- Tabla de Clientes Registrados -->
-    <div class="mt-4">
-        <table class="table table-striped table-hover shadow">
-            <thead class="table-dark">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>DNI</th>
-                    <th>Teléfono</th>
-                    <th>Correo Electrónico</th>
-                    <th>Dirección</th>
-                    <th>Fecha de Registro</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Juan</td>
-                    <td>Pérez</td>
-                    <td>12345678</td>
-                    <td>987654321</td>
-                    <td>juan.perezemail.com</td>
-                    <td>Calle Ficticia 123</td>
-                    <td>2025-03-10</td>
-                    <td>
-                        <button class="btn btn-outline-primary btn-sm">✏️</button>
-                        <button class="btn btn-outline-danger btn-sm">🗑️</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Maria</td>
-                    <td>Gómez</td>
-                    <td>23456789</td>
-                    <td>912345678</td>
-                    <td>maria.gomezemail.com</td>
-                    <td>Avenida Siempre Viva 456</td>
-                    <td>2025-03-11</td>
-                    <td>
-                        <button class="btn btn-outline-primary btn-sm">✏️</button>
-                        <button class="btn btn-outline-danger btn-sm">🗑️</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+    <table class="table table-striped table-hover shadow">
+        <thead class="table-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>DNI</th>
+                <th>Teléfono</th>
+                <th>Correo Electrónico</th>
+                <th>Dirección</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan</td>
+                <td>Pérez</td>
+                <td>12345678</td>
+                <td>987654321</td>
+                <td>juan.perezemail.com</td>
+                <td>Calle Ficticia 123</td>
+                <td>2025-03-10</td>
+                <td>
+                    <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCliente">✏️</button>
+                    <button class="btn btn-outline-danger btn-sm">🗑️</button>
+                </td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Incluir el componente del modal -->
+    <app-cliente-modal></app-cliente-modal>
 </div>

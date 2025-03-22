@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
-  imports: [MatIconModule, RouterModule, NgIf, NgFor], // Asegurar que NgIf y NgFor están incluidos
+  imports: [MatIconModule, RouterModule, NgIf], // Asegurar que NgIf y NgFor están incluidos
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
