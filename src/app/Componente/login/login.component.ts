@@ -11,17 +11,11 @@ import { NgIf } from '@angular/common';
   styleUrls: ['./login.component.css'],
   imports: [FormsModule, NgIf]
 })
-export class LoginComponent implements OnInit{
+export class LoginComponent {
   credentials: LoginRequest = { username: '', password: '' };
   errorMessage: string = '';
 
   constructor(private authService: AuthService, private router: Router) {}
-  ngOnInit(): void {
-    // Si ya está autenticado, redirige al dashboard
-    if (this.authService.isAuthenticated()) {
-      this.router.navigate(['/dashboard']);
-    }
-  }
 
   ingresar(): void {
     this.authService.login(this.credentials).subscribe({

@@ -83,6 +83,14 @@
       <ul *ngIf="expandedMenus['ventas']" class="submenu">
         <li><a routerLink="/dashboard/venta"><mat-icon>shopping_cart</mat-icon> Ventas</a></li>
       </ul>
+
+      <!-- Botón de Logout -->
+      <li class="logout">
+        <a (click)="logout()">
+          <mat-icon>logout</mat-icon>
+          <span> Cerrar Sesión</span>
+        </a>
+      </li>
     </ul>
   </aside>
 

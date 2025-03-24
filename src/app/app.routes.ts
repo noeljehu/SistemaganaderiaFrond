@@ -13,30 +13,32 @@ import { MedicinaFormComponent } from './Componente/Formulario/medicina-form/med
 import { RegistroMedicinaFormComponent } from './Componente/Formulario/registro-medicina-form/registro-medicina-form.component';
 import { VentaFormComponent } from './Componente/Formulario/venta-form/venta-form.component';
 import { LoginComponent } from './Componente/login/login.component';
+import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/login', pathMatch: 'full' },
-  { path: '**', redirectTo: '/login' },
 
-  { 
-    path: 'dashboard', 
-    component: DashboardComponent, // Dashboard carga los formularios dentro
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [AuthGuard], // Protege el acceso a todo el dashboard
     children: [
-      { path: 'inicio', component: UsuarioFormComponent }, 
-      { path: 'usuario', component: UsuarioFormComponent }, 
-      { path: 'cliente', component: ClienteFormComponent },
-      { path: 'proveedor', component: ProveedorFormComponent },
-      { path: 'establo', component: EstabloFormComponent },
-      { path: 'corral', component: CorralFormComponent },
-      { path: 'ganado', component: GanadoFormComponent },
-      { path: 'historial-clinico', component: HistorialClinicoFormComponent },
-      { path: 'alimento', component: AlimentoFormComponent },
-      { path: 'registro-alimento', component: RegistroAlimentoFormComponent },
-      { path: 'medicina', component: MedicinaFormComponent },
-      { path: 'registro-medicina', component: RegistroMedicinaFormComponent },
-      { path: 'venta', component: VentaFormComponent }
-    ] 
-  }
+      { path: 'inicio', component: UsuarioFormComponent, canActivate: [AuthGuard] },
+      { path: 'usuario', component: UsuarioFormComponent, canActivate: [AuthGuard] },
+      { path: 'cliente', component: ClienteFormComponent, canActivate: [AuthGuard] },
+      { path: 'proveedor', component: ProveedorFormComponent, canActivate: [AuthGuard] },
+      { path: 'establo', component: EstabloFormComponent, canActivate: [AuthGuard] },
+      { path: 'corral', component: CorralFormComponent, canActivate: [AuthGuard] },
+      { path: 'ganado', component: GanadoFormComponent, canActivate: [AuthGuard] },
+      { path: 'historial-clinico', component: HistorialClinicoFormComponent, canActivate: [AuthGuard] },
+      { path: 'alimento', component: AlimentoFormComponent, canActivate: [AuthGuard] },
+      { path: 'registro-alimento', component: RegistroAlimentoFormComponent, canActivate: [AuthGuard] },
+      { path: 'medicina', component: MedicinaFormComponent, canActivate: [AuthGuard] },
+      { path: 'registro-medicina', component: RegistroMedicinaFormComponent, canActivate: [AuthGuard] },
+      { path: 'venta', component: VentaFormComponent, canActivate: [AuthGuard] }
+    ]
+  },
+
+  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirige al login por defecto
+  { path: '**', redirectTo: '/login' } // Rutas no existentes van al login
 ];
