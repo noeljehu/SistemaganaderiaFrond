@@ -1,118 +1,144 @@
-/* Resetear márgenes y paddings */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Centrar el contenedor en la pantalla */
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-  }
-  
-  /* Estilo del formulario */
-  .login-container {
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center
-  }
-  
-  /* Estilos del título */
-  h2 {
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  /* Grupos de entrada */
-  .input-group {
-    text-align: left;
-    margin-bottom: 15px;
-  }
-  
-  .input-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  /* Botón de envío */
-  .btn {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    background: #4facfe;
-    color: white;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-  }
-  
-  .btn:hover {
-    background: #00c2fe;
-  }
-  
-  /* Enlace de registro */
-  .register-link {
-    margin-top: 15px;
-    font-size: 14px;
-  }
-  
-  .register-link a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .register-link a:hover {
-    text-decoration: underline;
-  }
-  /* Resetear márgenes y paddings */
+/* Reset básico y estilos globales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
   font-family: Arial, sans-serif;
 }
 
-/* Centrar el contenedor en la pantalla */
-body, html {
+/* Contenedor principal: dos secciones de igual ancho */
+.pantalla-dividida {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sección izquierda: imagen de fondo */
+.izquierdo {
+  flex: 1;
+  position: relative; /* Para posicionar el overlay */
+  overflow: hidden;
+}
+
+.izquierdo img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;  /* Para que la imagen cubra todo el contenedor */
+}
+
+/* Overlay para superponer texto sobre la imagen */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+/* Estilo para el título y la descripción */
+.finca {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.descrip {
+  font-size: 1.2rem;
+}
+
+/* Sección derecha: formulario de login */
+.derecho {
+  flex: 1;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #4facfe, #00f2fe);
+  padding: 20px;
 }
 
-/* Asegurar que el contenedor esté centrado */
-.login-container {
+.form-wrapper {
   width: 100%;
   max-width: 400px;
+  background: #fff;
   padding: 20px;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper h2 {
+  margin-bottom: 20px;
   text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #333;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.error {
+  margin-top: 15px;
+  text-align: center;
+  color: #d9534f;
+}
+
+.register-link {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.register-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
 }
